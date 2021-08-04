@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+    {#        <div class="center-column">#}
+    {##}
+    {##}
+    {#            {% for task in all_tasks %}#}
+    {#                <div class="item-row">#}
+    {#                        <a class="taskss" href="{% url 'TaskDetail' task.pk %}"  ><span>{{ task }}</span></a>#}
+    {#                    <br>#}
+    {##}
+    {#                </div>#}
+    {##}
+    {#            {% endfor %}#}
+    {#        </div>#}
+
+    <div class="center-column">
+    <div class="todo-list">
+
+            {% for task in tasksss %}
+                <div class="item-row">
+                    <span class="taskss">{{ task.title }}
+
+                    </span>
+                </div>
+            {% endfor %}
+
+
+    </div>
+    </div>
+    {#    -------------------------#}
+
+{% endblock content %}
+

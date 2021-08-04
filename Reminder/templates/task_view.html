@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 
-    {% block content %}
-      <ul>
+{% block content %}
+    <ul>
         {% for task in all_tasks %}
-             <li>{{ task.title|capfirst |title }}
-             <h1>the times between tow dates:</h1><span>{{ task.EndDateTimeField|timeuntil}}</span>
-             </li>
+            <li>{{ task.title|capfirst |title }}
+            <li>{{ task.EndedTasks }}
+                <h1>the times between tow dates:</h1><span>{{ task.EndDateTimeField|timeuntil }}</span>
+            </li>
         {% endfor %}
 
-      </ul>
+    </ul>
 
-    {% endblock content %}
+{% endblock content %}

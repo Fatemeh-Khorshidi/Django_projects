@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+    {#    <div class="center-column">#}
+    {##}
+    {#        <ul>#}
+    {#            {% for category in all_categories %}#}
+    {#                <li><a href="{% url 'CategoryDetail' category.pk %}">{{ category.name }}#}
+    {##}
+    {#                </a></li>#}
+    {#            {% endfor %}#}
+    {##}
+    {#        </ul>#}
+    {#    </div>#}
+    <div class="">
+        <div class="row">
+            <div class="col_6 center-column">
+            <div class="item-row">
+                <h3>null categories</h3>
+                <ul>
+                    {% for category in null_category %}
+                        <li><a class="taskss" href="{% url 'CategoryDetail' category.pk %}">{{ category.name }}
+
+                        </a></li>
+
+
+                    {% endfor %}
+                </ul>
+
+            </div>
+            <div class="col_6 ">
+            <div class="item-row">
+                <h3>full categories</h3>
+                <ul>
+                    {% for category in full_category %}
+                        <li><a class="taskss" href="{% url 'CategoryDetail' category.pk %}">{{ category.name }}
+
+                        </a></li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            </div>
+        </div>
+{% endblock content %}
+

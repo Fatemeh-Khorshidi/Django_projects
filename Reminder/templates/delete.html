@@ -1,8 +1,16 @@
-<p>Are you sure you want to delete "{{item}}"?</p>
+{% extends 'base.html' %}
 
-<a href="{% url 'list' %}" >Cancel</a>
+{% block content %}
+    <div class="center-column">
+        <p>Are you sure you want to delete "{{ item }}"?</p>
 
-<form method="POST" action="">
-	{% csrf_token %}
-	<input type="submit" name="Confirm">
-</form>
+
+        <div class="" style="display: flex ; justify-content: space-around;">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="submit" name="Confirm">
+            </form>
+            <a class="btn bbtn" href="{% url 'TaskList' %}">Cancel</a>
+        </div>
+    </div>
+{% endblock content %}

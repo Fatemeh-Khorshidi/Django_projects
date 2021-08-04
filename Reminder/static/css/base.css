@@ -41,3 +41,28 @@
 		background-color: #ffae19;
 		border-color: #e59400;
 	}
+
+
+	li.nav-item:hover {
+    background-color: aqua!important;
+}
+	.my_btn{
+		justify-content: center!important;
+		margin-left: 40%;
+
+	}
+
+    .bbtn{
+    width: 17%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid;
+    background: #efefef;
+    }
+
+	.taskss{
+	text-decoration: none;
+    color: aliceblue;
+    font-size: x-large;
+	}
